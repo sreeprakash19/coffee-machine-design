@@ -6,6 +6,17 @@ import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {AppMaterialModule} from './app-material/app-material.module';
 
+import { ReactiveFormsModule } from '@angular/forms';
+
+import { FlexLayoutModule } from '@angular/flex-layout';
+
+
+
+//import * as PlotlyJS from 'plotly.js/dist/plotly.js';
+//import { PlotlyModule } from 'angular-plotly.js'
+
+//PlotlyModule.plotlyjs = PlotlyJS;
+
 @NgModule({
   declarations: [
     AppComponent
@@ -14,7 +25,11 @@ import {AppMaterialModule} from './app-material/app-material.module';
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
-    AppMaterialModule
+    AppMaterialModule,
+    ReactiveFormsModule,
+    FlexLayoutModule
+    //PlotlyModule
+
   ],
   providers: [],
   bootstrap: [AppComponent]
