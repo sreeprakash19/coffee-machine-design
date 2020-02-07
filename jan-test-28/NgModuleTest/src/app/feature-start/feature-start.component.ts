@@ -79,7 +79,7 @@ export interface DialogData {
               <div class="dialog">
              <h1>Family Update</h1>
              <mat-form-field>
-             <input matInput  placeholder="Father name?">
+             <input matInput  placeholder="Father name">
              </mat-form-field> 
              <mat-form-field>
              <input matInput  placeholder="Mother Name">

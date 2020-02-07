@@ -36,6 +36,12 @@ export interface PokemonGroup {
       pokemon: [
         {value: 'login-page', viewValue: 'MyMember-Login'}
       ]
+    },
+    {
+      name: 'Database',
+      pokemon: [
+        {value: 'database', viewValue: 'Database'}
+      ]
     }
 
   ];
@@ -57,6 +63,12 @@ export interface PokemonGroup {
         
       ]
     },
+    {
+      name: 'Database',
+      pokemon: [
+        {value: 'database', viewValue: 'Database'}
+      ]
+    }
 
 
 

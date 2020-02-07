@@ -8,7 +8,8 @@ const routes: Routes = [
 { path: 'feature-start', loadChildren: () => import('./feature-start/feature-start.module').then(m => m.FeatureStartModule) },
 { path: 'login-page',loadChildren: () => import('./login-page/login-page.module').then(m => m.LoginPageModule) },
 { path: '', redirectTo: '' , pathMatch: 'full'},
-{ path: 'stepper-page', loadChildren: () => import('./stepperpage/stepperpage.module').then(m => m.StepperpageModule) }
+{ path: 'stepper-page', loadChildren: () => import('./stepperpage/stepperpage.module').then(m => m.StepperpageModule) },
+{ path: 'database', loadChildren: () => import('./database/database.module').then(m => m.DatabaseModule) }
 ]
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
