@@ -1,19 +1,12 @@
-<div gdAreas="header header | side content | footer footer" gdGap="10px" gdRows="auto auto auto">
-  <!--Header-->
-
+<!--
+  <div gdAreas="header header | side content | footer footer" gdGap="10px" gdRows="auto auto auto">
   <div gdArea="header">
     <mat-toolbar color="primary">
       <span>     Neural Networks!!!!!!!!!!!!!!!!! </span>
     </mat-toolbar>
   </div>
- 
-  
 
-<!--   side--
--->
 <div gdArea="side" fxLayout="column" fxLayoutAlign="center center" >
-
-
 <mat-card>
 Introduction
   <p>NanoNeuron is an over-simplified version of the Neuron concept from Neural Networks. 
@@ -46,5 +39,66 @@ Introduction
   </div>
 </div>
 </div>
+--->
 
+<mat-card>
+  <mat-card-header>
+    <mat-card-title><h1>    Neural Networks!!!!!!!!!!!!!!!!!</h1></mat-card-title>
+  </mat-card-header>
+  <mat-card-content>
+    
+    <div fxLayout="row" fxLayout.md="row" fxLayout.sm="column" fxLayout.xs="column" fxLayoutAlign="center" fxLayoutGap="20px">
+      <div fxFlex="60%">
+     
+  <mat-card>
+  Introduction
+    <p>NanoNeuron is an over-simplified version of the Neuron concept from Neural Networks. 
+    <p>NanoNeuron is trained to convert temperature values from Celsius to Fahrenheit.</p>
+    <p>For simplicity reasons we're not even going to build a network on NanoNeurons.</p>
+    <p>We will have it all working on its own, doing some magical predictions for us. Namely,</p>
+    <p>we will teach this singular NanoNeuron to convert (predict) </p>
+    <p>the temperature from Celsius to Fahrenheit.</p>
+    </mat-card>
+    </div>
+    <mat-divider [vertical]="true"></mat-divider>
+    
+    <div fxFlex>
+      <div fxLayout="column" fxLayoutAlign="center" fxLayoutGap="10px">
+        <h1>Try It</h1>
+        
+    <mat-form-field appearance="outline">
+    <mat-label>Generate Data Sets</mat-label>
+    <input type="number" matInput placeholder="a number between (1-99ng)"  change=" generatedatasets(input.value); input.value=''">
+    </mat-form-field>
 
+  
+    <mat-form-field appearance="outline">
+    <mat-label>Set Epochs</mat-label>
+      <input type="number" matInput placeholder="a number between (1-1000)"  change="getdata()">
+    </mat-form-field>
+    
+
+     <input type="number" id="rec4" #input class="form-control" (change)="
+     generateData(input.value); input.value=''">
+    
+  
+  
+      <div>
+         <div style="float:left">
+              <button mat-raised-button color="primary" (click)="trainmodel()">Fetch Data</button>
+         </div>
+      </div>
+    </div>
+    </div>
+    </div>
+  </mat-card-content>
+</mat-card>
+<div>
+<h1>loaded data</h1>
+<plotly-plot ></plotly-plot >
+
+</div>
+<div>
+  <h2>predicted data</h2>
+   <plotly-plot ></plotly-plot >
+</div>
