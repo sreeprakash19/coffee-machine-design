@@ -1,0 +1,36 @@
+<!--
+  <video #inputVideo autoplay muted> </video>
+<canvas #overlay> </canvas>
+-->
+<p></p>
+<div class="container">
+<div class="form-group">
+  <label class="control-label">Label:</label>
+  <input #file type="file" [(ngModel)]="newLabel"  accept='image/*' (change)="preview(file.files)"  />
+  <img #myimage [src]="imgURL" height="200" *ngIf="imgURL" (load)="AddImg()">
+
+  <input #filenext type="file" [(ngModel)]="newLabelnext"  accept='image/*' (change)="previewnext(filenext.files)" />
+  <img #myimagenext [src]="imgURLnext" height="200" *ngIf="imgURLnext" (load)="AddnextImg()">
+
+  <input #filenext type="file" [(ngModel)]="newLabelnexts"  accept='image/*' (change)="previewnexts(filenext.files)" />
+  <img #myimagenexts [src]="imgURLnexts" height="200" *ngIf="imgURLnexts" (load)="AddImages()">
+
+
+  <button (click)="capture()" class="btn btn-primary">Classify Video</button>
+  <button (click)="train()" class="btn btn-danger">Train & Classify</button>
+</div>
+
+Result: {{labelresult | json}}
+<div>
+  <div class="panel-body">
+    <video #video id="video" width="320" height="240" autoplay class="img-thumbnail"></video>
+    <button (click)="takepic()" class="btn btn-primary">Take Pic</button>
+    <canvas #canvas id="canvas" width="320" height="240" class="img-thumbnail"></canvas>
+    <button (click)="FirstImg()" class="btn btn-primary">FirstImg</button>
+    <button (click)="secondImg()" class="btn btn-primary">secondImg</button>
+    <button (click)="thirdImg()" class="btn btn-primary">Third image</button>
+  </div>
+</div>
+<div>
+</div>
+</div>
